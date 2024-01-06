@@ -255,6 +255,6 @@
     - The git cherry-pick command is used to take the change introduced in a single Git commit and try to re-introduce it as a new commit on the branch you’re currently on.
     - This can be useful to only take one or two commits from a branch individually rather than merging in the branch which takes all the changes.
     ```bash
-    $ git cherry-pick e43a6
+    git cherry-pick e43a6
     ```
     NOTE : Here, e43a6 is the hash which can be ibtained using git log.
