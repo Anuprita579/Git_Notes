@@ -151,3 +151,99 @@
    ```bash
    git commit --allow-empty -m "my message"
    ```
+
+## branch
+### Create branch
+1. **`git branch mybranch`:**
+   - Creates a new branch named "mybranch".
+   ```bash
+   git branch mybranch
+   ```
+
+2. **`git branch mybranch ab1afef`:**
+    - Creates a new branch named "mybranch" starting from the commit with hash "ab1afef."
+    ```bash
+    git branch mybranch ab1afef
+    ```
+
+3. **`git branch mybranch remotes/origin/opera`:**
+    - Creates a new local branch named "mybranch" that tracks the remote branch "origin/opera."
+    ```bash
+    git branch mybranch remotes/origin/opera
+    ```
+
+### Delete a branch
+1. **`git branch -d mybranch`:**
+   - Deletes the branch "mybranch" if its changes have been merged. Use `-d` for a safe delete.
+   ```bash
+   git branch -d mybranch
+   ```
+
+2. **`git branch -D mybranch`:**
+   - Forces the deletion of the branch "mybranch," even if changes are not merged.
+   ```bash
+   git branch -D mybranch
+   ```
+
+### List branches
+1. **`git branch`:**
+   - Lists all local branches.
+   ```bash
+   git branch
+   ```
+
+2. **`git branch -a` or `git branch --all`:**
+    - Lists all local and remote branches.
+    ```bash
+    git branch --all
+    ```
+
+3. **`git branch -v`:**
+   - Lists all local branches with additional information (last commit message and hash).
+   ```bash
+   git branch -v
+   ```
+
+4. **`git branch -vv`:**
+    - Lists local branches with information about their upstream branches.
+    ```bash
+    git branch -vv
+    ```
+
+5. **`git branch --merged`:**
+   - Lists branches that have been merged into the current branch.
+   ```bash
+   git branch --merged
+   ```
+
+6. **`git branch --no-merged`:**
+   - Lists branches that have not been merged into the current branch.
+   ```bash
+   git branch --no-merged
+   ```
+
+7. **`git branch --no-merged master`:**
+   - Lists branches that haven't been merged into the "master" branch.
+   ```bash
+   git branch --no-merged master
+   ```
+
+### Rename branch
+1. **`git branch --move bad-branch-name corrected-branch-name`:**
+   - Renames a branch from "bad-branch-name" to "corrected-branch-name."
+   ```bash
+   git branch --move bad-branch-name corrected-branch-name
+   ```
+
+2. **`git branch --move master main`:**
+    - Renames the local branch "master" to "main."
+    ```bash
+    git branch --move master main
+    ```
+
+### Track branch
+1. **`git branch -u origin/serverfix`:**
+    - Sets up the tracking branch for the current branch to track the remote branch "serverfix" on the "origin" remote.
+    ```bash
+    git branch -u origin/serverfix
+    ```
